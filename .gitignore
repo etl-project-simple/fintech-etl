@@ -1,0 +1,85 @@
+# -------------------------------
+# Python
+# -------------------------------
+*.py[cod]
+__pycache__/
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+*.egg
+*.egg-info/
+.eggs/
+dist/
+build/
+pip-wheel-metadata/
+*.manifest
+*.spec
+
+# Virtual environments
+.env
+.env.local
+.venv/
+venv/
+env/
+ENV/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# -------------------------------
+# Airflow
+# -------------------------------
+logs/
+airflow.cfg
+unittests.cfg
+dags/__pycache__/
+plugins/__pycache__/
+
+# -------------------------------
+# Spark
+# -------------------------------
+output/
+checkpoint/
+derby.log
+.metastore/
+
+# -------------------------------
+# Docker
+# -------------------------------
+*.pid
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+
+# -------------------------------
+# Editors / IDEs
+# -------------------------------
+.vscode/
+.idea/
+*.iml
+*.sublime-workspace
+*.sublime-project
+
+# -------------------------------
+# OS generated files
+# -------------------------------
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
