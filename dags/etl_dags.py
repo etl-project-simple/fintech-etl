@@ -15,10 +15,10 @@ with DAG(
 ):
     run_etl = BashOperator(
         task_id="run_pyspark_etl",
-        bash_command="python -m etl.etl",
+        bash_command="python -m etl.main",
         env={
             "ENV_FILE": "/opt/airflow/.env",
-            "PYTHONPATH": "/opt/airflow",  # để import theo package etl.*
+            "PYTHONPATH": "/opt/airflow", 
         },
     )
     run_etl

@@ -10,7 +10,7 @@ An **ETL pipeline** that processes financial transaction data (CSV → Parquet �
 fintech_project/
 │── dags/etl_dags.py         # Airflow DAG defining the daily ETL job
 │── etl/
-│   ├── etl.py                # Main entry point to run ETL
+│   ├── main.py                # Main entry point to run ETL
 │   ├── extract.py            # Extract module (CSV → DataFrame)
 │   ├── transform.py          # Transform module (dim_user, dim_payment, fact_transactions)
 │   └── load.py               # Load module (write to S3 + COPY into Redshift)
@@ -20,7 +20,7 @@ fintech_project/
 │── Dockerfile                # Dockerfile for ETL container
 │── .env.simple               # Sample environment file (without secrets)
 │── .gitignore
-```
+```|
 
 ---
 
@@ -37,26 +37,13 @@ cd fintech-etl
 cp .env.simple .env
 ```
 
-Edit with your actual AWS and Redshift details:
-```env
-AWS_REGION=ap-southeast-2
-AWS_S3_BUCKET=your-bucket
-AWS_S3_PREFIX=dwh
-REDSHIFT_HOST=your-redshift-endpoint
-REDSHIFT_DB=dev
-REDSHIFT_PORT=5439
-REDSHIFT_IAM_ROLE_ARN=arn:aws:iam::<account-id>:role/RedshiftS3AccessRole
-```
 
 ### 3. Install dependencies (local)
 ```bash
 pip install -r requirements.txt
 ```
 
-### 4. Run ETL locally
-```bash
-python etl/etl.py
-```
+
 
 ---
 
@@ -89,3 +76,5 @@ docker compose up -d
 ## ✨ Author
 👤 **duc81**  
 📧 `nduc080199@gmail.com`  
+
+├
