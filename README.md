@@ -119,8 +119,7 @@ SELECT * FROM public.fact_transactions ORDER BY transaction_date DESC LIMIT 10;
 
 ## 🛡️ Notes
 
-- `.env.simple` is just a template. Do not commit your real `.env` file.  
-- Extendable schema: you can add `dim_time`, `dim_location`, etc. for advanced analysis.  
+- `.env.simple` is just a template. 
 
 ---
 
